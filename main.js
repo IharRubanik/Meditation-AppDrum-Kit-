@@ -27,11 +27,11 @@ document.addEventListener('keydown',  playNoteKey);
    function playNoteKey (i) {
     // создали переменную, которая равна букве клавиатуры 
     let kDown = i.key;
-    // console.log(kDown);
-        let audio = document.getElementsByClassName(kDown);
-        console.log(audio);
-        // note.currentTime = 0;
-        // audio.play();
+        let audio = document.getElementById(kDown);
+        audio.currentTime = 0;
+        audio.play();
+        
+        
 
    }
 
