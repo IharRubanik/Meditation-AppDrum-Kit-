@@ -19,4 +19,21 @@ function playNote(e) {
  note.addEventListener('ended',() => {
   key.classList.remove('active');
  });
+
 }
+// повесили обработчик событий на весь докуент при нажатии клавиш
+document.addEventListener('keydown',  playNoteKey);
+// создали функцию, которая принимает событие клавиатуры
+   function playNoteKey (i) {
+    // создали переменную, которая равна букве клавиатуры 
+    let kDown = i.key;
+    // console.log(kDown);
+        let audio = document.getElementsByClassName(kDown);
+        console.log(audio);
+        // note.currentTime = 0;
+        // audio.play();
+
+   }
+
+
+
